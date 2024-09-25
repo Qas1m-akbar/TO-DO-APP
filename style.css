@@ -1,0 +1,163 @@
+    /* DEAR SIR TATHEER HUSSAIN: I make and get idea of this to-do app with help of Youtube tutorial but i add some more
+       functionality by myself and i add KEYPRESS ENTER EVENT and also Add MAX_HEIGHT with SCROLL property */
+     
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;  
+    background: linear-gradient( 120deg , #cfd9df,#e2eb);
+    padding: 10px;
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 550px;
+    background: white;
+    margin: 140px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 40px;
+    box-shadow: 0 0 30px #5237c9;
+
+}
+
+#list-container{
+    max-height: 200px;
+    overflow-y: scroll; 
+}
+
+h2{
+    display: flex;
+    align-items: center;
+    color: #1e008d;
+    font-size: 30px;
+    margin-bottom: 50px;   
+    position: relative; 
+    margin-left: 10px;
+}
+
+h2 img{
+    width: 40px;
+    position: absolute;
+    right: 0;
+
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    /* outline-offset: 3px; */
+    /* outline: 1px groove #000; */
+    border-radius: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px #5d5d5d;
+    padding: 3px;
+    
+}
+
+
+input{
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 19px;
+    font-weight: 500;
+    background: transparent;
+    letter-spacing: 1px;
+    
+    
+}
+input::placeholder{
+    color: #1e008d;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 16px 30px ;
+    font-size: 18px;
+    font-weight: 600;
+    user-select: none;
+    cursor: pointer;
+    /* margin: 1px; */
+     color: #fff;
+     background: #9307b9;
+     border-radius: 30px;
+    }
+    
+    ul li{
+        padding: 12px 10px 12px 50px;
+        list-style: none;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        cursor: pointer;
+        margin-block: 5px;
+        position: relative;
+
+
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: url(/assests/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left:5px;
+}
+
+ul li.checked{
+    background-color: #7e5df5;
+    border-radius: 45px;
+    text-decoration: line-through;
+    color: #e8dada;
+}
+
+ul li.checked::before{
+    background-image: url(/assests/checked.png);
+    background-size: cover;
+
+}
+
+ul li span{
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 50%;
+
+}
+
+ul li span:hover{
+    background-color: #1e008d;
+    color: #fff;
+}
+
+ul li.checked span{
+    color: #fff;
+}
+
+ul li.checked span:hover{
+    background:#fff;
+    color: #000;
+}
+
